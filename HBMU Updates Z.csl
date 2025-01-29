@@ -2,7 +2,7 @@
 <style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="sort-only" default-locale="zh-CN">
   <!-- This style was edited with the Visual CSL Editor (http://editor.citationstyles.org/visualEditor/) -->
   <info>
-    <title>National Natural Science Foundation of China (中文)</title>
+    <title>National Natural Science Foundation of China (Chinese)</title>
     <title-short>NSFC</title-short>
     <id>http://www.zotero.org/styles/national-natural-science-foundation-of-china</id>
     <link href="http://www.zotero.org/styles/national-natural-science-foundation-of-china" rel="self"/>
@@ -79,7 +79,7 @@
       </else-if>
       <else-if type="patent">
         <text macro="title"/>
-        <text variable="number" prefix=": 中国, " suffix="[P].  "/>
+        <text variable="number" prefix=": China, " suffix="[P].  "/>
       </else-if>
       <else>
         <text macro="title" suffix="[J]. "/>
@@ -93,7 +93,7 @@
       </name>
     </names>
     <names variable="translator">
-      <name name-as-sort-order="all" sort-separator=" " delimiter=", " delimiter-precedes-last="always" suffix=", 译"/>
+      <name name-as-sort-order="all" sort-separator=" " delimiter=", " delimiter-precedes-last="always" suffix=", translated"/>
     </names>
   </macro>
   <macro name="publisher">
@@ -156,51 +156,4 @@
       <text variable="citation-number"/>
     </layout>
   </citation>
-  <bibliography et-al-min="4" et-al-use-first="3" second-field-align="flush" entry-spacing="0">
-    <layout suffix=".">
-      <text variable="citation-number" prefix="[" suffix="]"/>
-      <text macro="author" suffix=". "/>
-      <group delimiter=", ">
-        <text variable="publisher"/>
-        <choose>
-          <if type="webpage" variable="container-title" match="all">
-            <date variable="issued" suffix=". ">
-              <date-part name="year"/>
-              <date-part name="month" form="numeric-leading-zeros" prefix="-"/>
-              <date-part name="day" form="numeric-leading-zeros" prefix="-"/>
-            </date>
-          </if>
-          <else-if type="webpage"/>
-          <else-if type="patent">
-            <date variable="issued">
-              <date-part name="year"/>
-              <date-part name="month" form="numeric-leading-zeros" prefix="-"/>
-              <date-part name="day" form="numeric-leading-zeros" prefix="-"/>
-            </date>
-          </else-if>
-          <else-if variable="publisher">
-            <date variable="issued" suffix=". ">
-              <date-part name="year"/>
-            </date>
-          </else-if>
-          <else-if type="bill legislation" match="any"/>
-        </choose>
-      </group>
-      <text macro="titleField"/>
-      <text macro="secondaryAuthor" suffix=". "/>
-      <text variable="edition" prefix="第" suffix="版. "/>
-      <text macro="publisher"/>
-      <text macro="pageField" font-variant="normal" prefix=": "/>
-      <text macro="referenceDate"/>
-      <choose>
-        <if type="webpage" match="any">
-          <text macro="access" prefix=". "/>
-        </if>
-      </choose>
-      <text macro="recipient"/>
-      <text macro="interviewer"/>
-      <text macro="composer"/>
-      <text macro="original-author"/>
-    </layout>
-  </bibliography>
 </style>
